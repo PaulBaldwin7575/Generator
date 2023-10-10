@@ -5,7 +5,9 @@ import lombok.Getter;
 @Getter
 public enum NegativeProperties {
 
-    ATTACK("", "Атака", 1, Rarity.ORDINARY);
+    ATTACK("", "Атака", 1, Rarity.ORDINARY),
+    ATTACK_KYSLOT("", "Атака", 2, Rarity.RARE)
+    ;
 
     NegativeProperties(String name, String influence, int price, Rarity rarity) {
         this.name = name;

@@ -3,6 +3,8 @@ package org.example.enums;
 import lombok.Data;
 import lombok.Getter;
 
+import java.util.Random;
+
 @Getter
 public enum Rarity {
     ORDINARY(60, "Обычный"),
@@ -18,7 +20,9 @@ public enum Rarity {
         this.name = name;
     }
 
-    public static Rarity getRarity(int chance){
+    public static Rarity getRarity(){
+        Random random = new Random();
+        var chance = random.nextInt(100);
         if (chance < 60) {
             return ORDINARY;
         } else if (chance < 85) {

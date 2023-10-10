@@ -12,4 +12,9 @@ public class Item {
     private String name;
     private Rarity rarity;
     private Utility utility;
+
+    @Override
+    public String toString() {
+        return String.format("Предмет: %s %s, редкость: %s", name, utility.getName(), rarity.getName());
+    }
 }
