@@ -10,29 +10,31 @@ import java.util.Random;
 @ToString
 @Getter
 public enum Utility {
-    BLADE("Клинок", Category.ATTACK),
-    SWORD("Меч", Category.ATTACK),
-    BOW("Лук", Category.ATTACK),
-    CROSSBOW("Арбалет", Category.ATTACK),
-    SPEAR("Копьё", Category.ATTACK),
-    HELMET("Шлем", Category.ARMOR),
-    HAT("Шляпа", Category.ARMOR),
-    BOOTS("Ботинки", Category.ARMOR),
-    GLOVES("Перчатки", Category.ARMOR),
-    PANTS("Штаны", Category.ARMOR),
-    JACKET("Куртка", Category.ARMOR),
-    BELT("Пояс", Category.ARMOR),
-    MAGIC_WAND("Палочка", Category.MAGIC),
-    MAGIC_RING("Кольцо", Category.MAGIC),
-    AMULET("Амулет", Category.MAGIC),
-    STICK("Посох", Category.MAGIC);
+    BLADE("Клинок", Category.ATTACK, Gender.MASCULINE),
+    SWORD("Меч", Category.ATTACK, Gender.MASCULINE),
+    BOW("Лук", Category.ATTACK, Gender.MASCULINE),
+    CROSSBOW("Арбалет", Category.ATTACK, Gender.MASCULINE),
+    SPEAR("Копьё", Category.ATTACK, Gender.NEUTER),
+    HELMET("Шлем", Category.ARMOR, Gender.MASCULINE),
+    HAT("Шляпа", Category.ARMOR, Gender.FEMININE),
+    BOOTS("Сапоги", Category.ARMOR, Gender.PLURAL),
+    GLOVES("Перчатки", Category.ARMOR, Gender.PLURAL),
+    PANTS("Штаны", Category.ARMOR, Gender.PLURAL),
+    JACKET("Куртка", Category.ARMOR, Gender.FEMININE),
+    BELT("Пояс", Category.ARMOR, Gender.MASCULINE),
+    MAGIC_WAND("Палочка", Category.MAGIC, Gender.FEMININE),
+    MAGIC_RING("Кольцо", Category.MAGIC, Gender.NEUTER),
+    AMULET("Амулет", Category.MAGIC, Gender.MASCULINE),
+    STICK("Посох", Category.MAGIC, Gender.MASCULINE);
 
     private final String name;
     private final Category category;
+    private final Gender gender;
 
-    Utility(String name, Category category) {
+    Utility(String name, Category category, Gender gender) {
         this.name = name;
         this.category = category;
+        this.gender = gender;
     }
 
     public static Utility getRandomUtility() {
