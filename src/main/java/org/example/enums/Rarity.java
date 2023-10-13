@@ -7,10 +7,9 @@ import java.util.Random;
 
 @Getter
 public enum Rarity {
-    ORDINARY(60, "Обычный"),
-    RARE(85, "Редкий"),
-    MYSTICAL(95, "Мистический"),
-    LEGENDARY(100, "Легендарный");
+    ORDINARY(1, "Обычный"),
+    MYSTICAL(2, "Мистический"),
+    LEGENDARY(3, "Легендарный");
 
     private final int chance;
     private final String name;
@@ -25,9 +24,7 @@ public enum Rarity {
         var chance = random.nextInt(100);
         if (chance < 60) {
             return ORDINARY;
-        } else if (chance < 85) {
-            return RARE;
-        } else if (chance < 95) {
+        } else if (chance < 90) {
             return MYSTICAL;
         }
         return LEGENDARY;

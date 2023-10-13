@@ -6,7 +6,12 @@ import lombok.Getter;
 public enum Category {
     ATTACK("Урон"),
     ARMOR("Броня"),
-    MAGIC("Магия");
+    MAGIC("Магия"),
+    ENDURANCE("Выносливость"),
+    SECRECY("Скрытность"),
+    SPEED("Скорость"),
+    HEALTH("Здоровье");
+
 
     private final String name;
 
