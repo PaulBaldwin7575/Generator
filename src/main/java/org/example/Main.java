@@ -58,7 +58,7 @@ public class Main {
             for (int i = 0; i < numberOfProperties; i++) {
                 var rarity = Rarity.getRarity();
                 var positivePropertiesWithRarity = positiveProperties.stream().filter(it -> it.getRarity().equals(rarity)).collect(Collectors.toList());
-                var isPositiveProperties = random.nextDouble() <= 0.5;
+                var isPositiveProperties = random.nextDouble() <= 0.6;
                 if (isPositiveProperties) {
                     var property = positivePropertiesWithRarity.get(random.nextInt(positivePropertiesWithRarity.size())).getProperty();
                     propertyList.add(property);

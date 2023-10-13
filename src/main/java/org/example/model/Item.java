@@ -22,7 +22,7 @@ public class Item {
 
     @Override
     public String toString() {
-        return String.format("Предмет: %s %s, тип: %s, мощность: %s свойства: %s, стоимость: %s золотых монет, редкость: %s",
+        return String.format("Предмет: %s %s, тип: %s, мощность: %s, свойства: %s, стоимость: %s золотых монет, редкость: %s",
                 name, utility.getName(), category.getName(), power, properties, price, rarity.getName());
     }
 }
